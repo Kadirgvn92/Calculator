@@ -1,24 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4b4-zN-ja4">
+                                <rect key="frame" x="48" y="284" width="66" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="M9P-VI-lTm"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="+" cornerStyle="large"/>
+                                <connections>
+                                    <action selector="btnCalculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rJv-mp-92m"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ea4-0V-ujO">
+                                <rect key="frame" x="88" y="195" width="218" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="mRe-pq-lnx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fXB-te-lbv">
+                                <rect key="frame" x="88" y="138" width="218" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6a6-L5-swh">
+                                <rect key="frame" x="122" y="284" width="66" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="eI6-9u-rhh"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="-" cornerStyle="large"/>
+                                <connections>
+                                    <action selector="btnCalculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PoF-qs-Dz1"/>
+                                    <action selector="btnMinus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VYE-ok-AbT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Fo-D0-rhR">
+                                <rect key="frame" x="270" y="284" width="66" height="44"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="/" cornerStyle="large"/>
+                                <connections>
+                                    <action selector="btnCalculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DJI-im-gIo"/>
+                                    <action selector="btnDivide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KMp-oL-bYa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Weo-gQ-IoG">
+                                <rect key="frame" x="196" y="284" width="66" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="SYC-qh-BC9"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="*" cornerStyle="large"/>
+                                <connections>
+                                    <action selector="btnCalculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bNB-aT-CUN"/>
+                                    <action selector="btnMulti:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fce-Xd-m1d"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="6" showsExpansionTextWhenTruncated="YES" sizingRule="oversize" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zE9-wq-4kO">
+                                <rect key="frame" x="17" y="350" width="361" height="64"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zE9-wq-4kO" secondAttribute="bottom" constant="405" id="0jZ-jS-21s"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Fo-D0-rhR" secondAttribute="trailing" constant="57" id="4rb-s7-q6v"/>
+                            <constraint firstItem="fXB-te-lbv" firstAttribute="centerX" secondItem="Ea4-0V-ujO" secondAttribute="centerX" id="4v9-Gc-gkA"/>
+                            <constraint firstItem="fXB-te-lbv" firstAttribute="trailing" secondItem="Ea4-0V-ujO" secondAttribute="trailing" id="CnY-Ap-SOD"/>
+                            <constraint firstItem="5Fo-D0-rhR" firstAttribute="leading" secondItem="Weo-gQ-IoG" secondAttribute="trailing" constant="8" id="HYv-8k-49O"/>
+                            <constraint firstItem="fXB-te-lbv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="79" id="ITc-0n-rag"/>
+                            <constraint firstItem="6a6-L5-swh" firstAttribute="baseline" secondItem="Weo-gQ-IoG" secondAttribute="baseline" id="K3H-bL-39j"/>
+                            <constraint firstItem="zE9-wq-4kO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="148" id="KBW-A3-81u"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4b4-zN-ja4" secondAttribute="bottom" constant="490" id="MiC-bY-hge"/>
+                            <constraint firstItem="6a6-L5-swh" firstAttribute="leading" secondItem="4b4-zN-ja4" secondAttribute="trailing" constant="8" id="Ptg-YZ-D5V"/>
+                            <constraint firstItem="zE9-wq-4kO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q5m-GC-kDv"/>
+                            <constraint firstItem="6a6-L5-swh" firstAttribute="baseline" secondItem="4b4-zN-ja4" secondAttribute="firstBaseline" id="TaF-q0-NuG"/>
+                            <constraint firstItem="zE9-wq-4kO" firstAttribute="top" secondItem="6a6-L5-swh" secondAttribute="bottom" constant="49" id="Wkl-lc-UuS"/>
+                            <constraint firstItem="4b4-zN-ja4" firstAttribute="top" secondItem="Ea4-0V-ujO" secondAttribute="bottom" constant="38" id="Z51-TS-2cM"/>
+                            <constraint firstItem="Weo-gQ-IoG" firstAttribute="leading" secondItem="6a6-L5-swh" secondAttribute="trailing" constant="8" id="dAh-hE-W13"/>
+                            <constraint firstItem="4b4-zN-ja4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="dn2-1R-JCX"/>
+                            <constraint firstItem="Ea4-0V-ujO" firstAttribute="centerX" secondItem="zE9-wq-4kO" secondAttribute="centerX" id="mXb-1W-X8u"/>
+                            <constraint firstItem="Weo-gQ-IoG" firstAttribute="baseline" secondItem="5Fo-D0-rhR" secondAttribute="baseline" id="qmc-M5-u5X"/>
+                            <constraint firstItem="Ea4-0V-ujO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="v5F-T0-Vqb"/>
+                            <constraint firstItem="Ea4-0V-ujO" firstAttribute="top" secondItem="fXB-te-lbv" secondAttribute="bottom" constant="40" id="vDr-JV-T6w"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="inputOne" destination="fXB-te-lbv" id="RZ8-eI-YTx"/>
+                        <outlet property="inputTwo" destination="Ea4-0V-ujO" id="crf-BU-ltF"/>
+                        <outlet property="lblResult" destination="zE9-wq-4kO" id="hPg-0c-QG1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="4.9295774647887329"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
